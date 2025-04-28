@@ -1,0 +1,81 @@
+prueba_vocacional/
+│
+├── manage.py
+├── requirements.txt
+├── config/           # Proyecto principal
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── base/                    # App para gestión de usuarios, menu, grupos, nombre de la empresa, types
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   ├── views.py
+│   ├── forms.py
+│   └── templates/
+│       └── usuarios/
+│           ├── registro.html
+│           ├── login.html
+│           └── perfil.html
+│
+├── evaluacion/                  # App para la evaluación vocacional
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   ├── views.py
+│   ├── forms.py
+│   └── templates/
+│       └── evaluacion/
+│           ├── inicio_evaluacion.html
+│           ├── pregunta.html
+│           └── resultado.html
+│
+├── pagos/                       # App para gestión de pagos
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   ├── views.py
+│   └── templates/
+│       └── pagos/
+│           ├── planes.html
+│           └── checkout.html
+│
+├── informes/                    # App para generación de informes
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   ├── views.py
+│   ├── utils.py                 # Funciones para generar informes
+│   └── templates/
+│       └── informes/
+│           ├── informe_completo.html
+│           ├── informe_parcial.html
+│           └── lista_informes.html
+│
+└── static/                      # Archivos estáticos
+    ├── css/
+    ├── js/
+    └── img/
+================================================================================================
+
+pip install django
+pip install django-crispy-forms
+pip install pillow  # Para manejo de imágenes
+pip install reportlab  # Para generar reportes PDF
+
+django-admin startproject config .
